@@ -1,0 +1,11 @@
+@use '../abstracts';
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: abstracts.rem(40);
+
+    margin-inline: abstracts.rem(36);
+    margin-block: abstracts.rem(42);
+}
