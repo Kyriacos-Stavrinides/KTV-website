@@ -1,4 +1,12 @@
+@use '../abstracts' as a;
+
 header {
-    background-color: var(--primary-accent-color);
-    height: 80vh;
+    background-color: var(--background-color);
+    height: 60vh;
+    
+
+    h1 {
+        font-size: 6.5ch;
+        padding-block: 0 a.rem(16);
+    }
 }

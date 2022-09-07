@@ -1,0 +1,12 @@
+@use '../abstracts/' as a;
+
+.gentle-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shadow {
+    box-shadow: a.rem(0) a.rem(0) a.rem(10) var(--secondary-accent-color);
+}
