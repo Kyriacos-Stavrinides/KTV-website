@@ -1,0 +1,11 @@
+@use '../abstracts/' as a;
+
+button {
+    border: none;
+    border-radius: a.rem(16);
+    color: var(--secondary-text-color);
+    background-color: var(--primary-accent-color);
+    font-size: a.rem(16);
+    font-weight: 600;
+    padding: a.rem(8) a.rem(24);
+}

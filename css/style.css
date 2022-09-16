@@ -52,21 +52,9 @@ a, a:visited, a:active {
   text-decoration: none;
 }
 
-button {
-  border: none;
-  border-radius: 1rem;
-  color: var(--secondary-text-color);
-  background-color: var(--primary-accent-color);
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.5rem 1.5rem;
-}
-
 .card {
   padding: 2%;
   min-height: 40vh;
-  display: flex;
-  flex-direction: column;
 }
 .card__header {
   color: var(--secondary-text-color);
@@ -76,26 +64,11 @@ button {
   font-weight: 300;
 }
 .card__button {
-  margin: auto;
+  margin: 0;
 }
 
 footer {
   background-color: var(--secondary-accent-color);
-  min-width: 100vw;
-  min-height: 30vh;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-footer nav ul {
-  margin: auto;
-  list-style-type: none;
-}
-footer div {
-  width: 50%;
 }
 
 header {
