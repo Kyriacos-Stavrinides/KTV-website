@@ -2,10 +2,10 @@
 
 button {
     border: none;
-    border-radius: a.rem(16);
+    border-radius: a.rem(20);
     color: var(--secondary-text-color);
     background-color: var(--primary-accent-color);
     font-size: a.rem(16);
     font-weight: 600;
-    padding: a.rem(8) a.rem(24);
+    padding: a.rem(12) a.rem(24);
 }
