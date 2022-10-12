@@ -7,17 +7,40 @@
     flex-direction: column;
     margin-bottom: a.rem(48);
 
+    @include a.breakpoint-up(medium) {
+        padding: 4%;
+        min-height: 10vh;
+        max-height: 20vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+
     &__header {
         color: var(--secondary-text-color);
         font-size: clamp(a.rem(16), a.rem(16) + 1.5vh, a.rem(24) + 2vh);
+
+        @include a.breakpoint-up(medium) {
+            grid-column: 1;
+            grid-row: 1;
+        }
     }
 
     &__text {
         font-weight: 300;
+
+        @include a.breakpoint-up(medium) {
+            grid-column: 1;
+            grid-row: 2;
+        }
     }
 
     &__button {
-        
         margin: auto;
+
+        @include a.breakpoint-up(medium) {
+            grid-column: 2;
+            grid-row: span 2;
+        }
     }
 }

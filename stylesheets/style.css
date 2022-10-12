@@ -69,15 +69,43 @@ button {
   flex-direction: column;
   margin-bottom: 3rem;
 }
+@media (min-width: 43.75em) {
+  .card {
+    padding: 4%;
+    min-height: 10vh;
+    max-height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+}
 .card__header {
   color: var(--secondary-text-color);
   font-size: clamp(1rem, 1rem + 1.5vh, 1.5rem + 2vh);
 }
+@media (min-width: 43.75em) {
+  .card__header {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
 .card__text {
   font-weight: 300;
 }
+@media (min-width: 43.75em) {
+  .card__text {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
 .card__button {
   margin: auto;
+}
+@media (min-width: 43.75em) {
+  .card__button {
+    grid-column: 2;
+    grid-row: span 2;
+  }
 }
 
 footer {
@@ -90,6 +118,12 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+@media (min-width: 43.75em) {
+  footer {
+    min-height: 40vh;
+    justify-content: space-evenly;
+  }
 }
 footer nav ul {
   margin: auto;
@@ -106,9 +140,24 @@ header {
   margin: auto;
   margin-top: 2rem;
 }
+@media (min-width: 43.75em) {
+  header {
+    width: 100%;
+    height: 50vh;
+    margin: 0;
+    background-color: var(--primary-accent-color);
+  }
+}
 header h1 {
   font-size: 6.5ch;
   padding-block: 0 1rem;
+}
+@media (min-width: 43.75em) {
+  header h1 {
+    font-size: 10ch;
+    padding: auto;
+    margin: auto;
+  }
 }
 
 main {

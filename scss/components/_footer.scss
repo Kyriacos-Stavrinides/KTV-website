@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 footer {
     background-color: var(--secondary-accent-color);
     min-width: 100vw;
@@ -10,6 +12,11 @@ footer {
 
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint-up(medium) {
+        min-height: 40vh;
+        justify-content: space-evenly;
+    }
 
     nav {
         // aspect-ratio: 1 / 1;
