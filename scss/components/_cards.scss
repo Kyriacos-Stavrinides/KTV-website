@@ -7,13 +7,22 @@
     flex-direction: column;
     margin-bottom: a.rem(48);
 
+    
+
     @include a.breakpoint-up(medium) {
-        padding: 4%;
+        padding-inline: 4%;
         min-height: 10vh;
-        max-height: 20vh;
+        // max-height: 20vh;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr;
+        grid-template-rows: auto auto;
+
+        & > * {
+            padding: a.rem(8);
+        }
+
+        
+        
     }
 
     &__header {
@@ -23,6 +32,8 @@
         @include a.breakpoint-up(medium) {
             grid-column: 1;
             grid-row: 1;
+
+            margin: auto 0;
         }
     }
 
@@ -35,12 +46,24 @@
         }
     }
 
+    &__image {
+        width: a.rem(240);
+        height: a.rem(240);
+        margin: auto;
+
+        @include a.breakpoint-up(medium) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        
+    }
+
     &__button {
         margin: auto;
 
         @include a.breakpoint-up(medium) {
             grid-column: 2;
-            grid-row: span 2;
+            grid-row: 2;
         }
     }
 }

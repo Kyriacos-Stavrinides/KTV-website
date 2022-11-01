@@ -3,6 +3,7 @@
 .gentle-flex {
     display: flex;
     flex-direction: column;
+    flex-basis: space-between;
     align-items: center;
     justify-content: center;
 }
