@@ -13,6 +13,8 @@ footer {
     align-items: center;
     justify-content: space-between;
 
+    
+
     @include breakpoint-up(medium) {
         min-height: 40vh;
         justify-content: space-evenly;
@@ -24,6 +26,11 @@ footer {
         ul {
             margin: auto;
             list-style-type: none;
+
+            img {
+                width: rem(28);
+                height: rem(28);
+            }
         }
     }
 
