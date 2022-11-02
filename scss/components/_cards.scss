@@ -1,69 +1,11 @@
-@use '../abstracts' as a;
+@use '../abstracts' as *;
 
 .card {
-    padding: 2%;
-    min-height: 40vh;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: a.rem(48);
+    background-color: var(--secondary-background-color);
+    width: 86%;
+    margin: auto;
 
-    
-
-    @include a.breakpoint-up(medium) {
-        padding-inline: 4%;
-        min-height: 10vh;
-        // max-height: 20vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-
-        & > * {
-            padding: a.rem(8);
-        }
-
-        
-        
-    }
-
-    &__header {
-        color: var(--secondary-text-color);
-        font-size: clamp(a.rem(16), a.rem(16) + 1.5vh, a.rem(24) + 2vh);
-
-        @include a.breakpoint-up(medium) {
-            grid-column: 1;
-            grid-row: 1;
-
-            margin: auto 0;
-        }
-    }
-
-    &__text {
-        font-weight: 300;
-
-        @include a.breakpoint-up(medium) {
-            grid-column: 1;
-            grid-row: 2;
-        }
-    }
-
-    &__image {
-        width: a.rem(240);
-        height: a.rem(240);
-        margin: auto;
-
-        @include a.breakpoint-up(medium) {
-            grid-column: 2;
-            grid-row: 1;
-        }
-        
-    }
-
-    &__button {
-        margin: auto;
-
-        @include a.breakpoint-up(medium) {
-            grid-column: 2;
-            grid-row: 2;
-        }
+    &-small {
+        height: 35vh;
     }
 }

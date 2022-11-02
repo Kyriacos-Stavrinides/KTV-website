@@ -15,15 +15,14 @@ window.onload = (event) => {
 
 
 function classRemover(element, className) {
-    let object = document.getElementsByClassName(element);
+    let object = Array.from(document.getElementsByClassName(element));
     for (const item of object) {
         item.classList.remove(className);
     }
 }
 
 function elementRemover(toDelete) {
-    let object = document.getElementsByClassName(toDelete);
-    console.log(object);
+    let object = Array.from(document.getElementsByClassName(toDelete));
     for (const item of object) {
         item.remove();
     }
