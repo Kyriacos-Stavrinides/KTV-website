@@ -62,8 +62,13 @@ a, a:visited, a:active {
   margin-inline: 0;
   margin-block: 0;
 }
-.grid-one-three {
+.grid-one {
   grid-template-columns: 1fr;
+}
+.grid-one-two {
+  grid-template-rows: auto auto;
+}
+.grid-one-three {
   grid-template-rows: auto auto auto;
 }
 .grid-three-one {
@@ -87,11 +92,13 @@ button {
 
 .card {
   background-color: var(--secondary-background-color);
-  width: 86%;
-  margin: auto;
 }
 .card-small {
-  height: 35vh;
+  height: 50vh;
+  width: 86%;
+}
+.card-info-side {
+  height: 40%;
 }
 
 footer {

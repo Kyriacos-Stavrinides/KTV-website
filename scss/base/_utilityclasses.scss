@@ -2,7 +2,6 @@
 
 .flex {
     display: flex;
-    // flex-basis: space-between;
     align-items: center;
     justify-content: center;
 
@@ -13,6 +12,10 @@
     &-row {
         flex-direction: row;
     }
+
+    // &-space {
+    //     flex-basis: space-between;
+    // }
 }
 
 .grid {
@@ -24,9 +27,17 @@
     margin-inline: 0;
     margin-block: 0;
 
-    &-one-three {
+    &-one {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
+
+        &-two {
+            grid-template-rows: auto auto;
+        }
+
+        &-three {
+            grid-template-rows: auto auto auto;            
+        }
+
     }
 
     &-three-one {

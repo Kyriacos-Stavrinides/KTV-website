@@ -2,10 +2,14 @@
 
 .card {
     background-color: var(--secondary-background-color);
-    width: 86%;
-    margin: auto;
 
     &-small {
-        height: 35vh;
+        height: 50vh;
+        width: 86%;
     }
+
+    &-info-side {
+        height: 40%;
+    }
+
 }
