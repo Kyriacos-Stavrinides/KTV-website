@@ -1,15 +1,2 @@
 @use '../abstracts' as *;
 
-.card {
-    background-color: var(--secondary-background-color);
-
-    &-small {
-        height: 50vh;
-        width: 86%;
-    }
-
-    &-info-side {
-        height: 40%;
-    }
-
-}

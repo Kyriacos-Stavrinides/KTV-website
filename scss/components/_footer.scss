@@ -2,22 +2,9 @@
 
 footer {
     background-color: var(--secondary-accent-color);
-    min-width: 100vw;
-    min-height: 30vh;
-    position: relative;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    align-items: center;
-    justify-content: space-between;
-
-    
 
     @include breakpoint-up(medium) {
-        min-height: 40vh;
-        justify-content: space-evenly;
+        
     }
 
     nav {

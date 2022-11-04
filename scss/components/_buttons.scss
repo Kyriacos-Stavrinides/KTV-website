@@ -1,11 +1,11 @@
-@use '../abstracts/' as a;
+@use '../abstracts/' as *;
 
 button {
     border: none;
-    border-radius: a.rem(20);
+    border-radius: rem(20);
     color: var(--secondary-text-color);
     background-color: var(--primary-accent-color);
-    font-size: a.rem(16);
+    font-size: rem(16);
     font-weight: 600;
-    padding: a.rem(12) a.rem(24);
+    padding: rem(12) rem(24);
 }

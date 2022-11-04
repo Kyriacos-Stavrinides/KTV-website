@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+
+body {
+    display: grid;
+    grid-template-columns: 7% 1fr 7%;
+    grid-template-areas: 
+        '. header .'
+        '. main .'
+        'footer footer footer'
+    ;
+
+    header {
+        display: grid;
+
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+main {
+    display: grid;
+    grid-auto-flow: row;
+
+    section {
+        display: grid;
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 7% repeat(2, 1fr) 7%;
+}
+
+.row-gap {
+    row-gap: 4ch;
+}
+

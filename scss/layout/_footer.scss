@@ -1,0 +1,20 @@
+footer {
+    grid-area: footer;
+
+    nav {
+        grid-column: 2 / 4;
+        grid-row: 1;
+
+        ul {
+            padding: 0;
+        }
+    }
+
+    div {
+        grid-column: 2 / 4;
+        grid-row: 2;
+
+        width: 100%;
+
+    }
+}

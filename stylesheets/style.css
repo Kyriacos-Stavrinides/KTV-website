@@ -44,38 +44,6 @@ a, a:visited, a:active {
   text-decoration: none;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.flex-column {
-  flex-direction: column;
-}
-.flex-row {
-  flex-direction: row;
-}
-
-.grid {
-  display: grid;
-  row-gap: 4.5rem;
-  margin-inline: 0;
-  margin-block: 0;
-}
-.grid-one {
-  grid-template-columns: 1fr;
-}
-.grid-one-two {
-  grid-template-rows: auto auto;
-}
-.grid-one-three {
-  grid-template-rows: auto auto auto;
-}
-.grid-three-one {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-}
-
 .shadow {
   box-shadow: 0rem 0rem 0.625rem var(--secondary-accent-color);
 }
@@ -90,33 +58,8 @@ button {
   padding: 0.75rem 1.5rem;
 }
 
-.card {
-  background-color: var(--secondary-background-color);
-}
-.card-small {
-  height: 50vh;
-  width: 86%;
-}
-.card-info-side {
-  height: 40%;
-}
-
 footer {
   background-color: var(--secondary-accent-color);
-  min-width: 100vw;
-  min-height: 30vh;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-@media (min-width: 43.75em) {
-  footer {
-    min-height: 40vh;
-    justify-content: space-evenly;
-  }
 }
 footer nav ul {
   margin: auto;
@@ -130,36 +73,87 @@ footer div {
   width: 50%;
 }
 
-header {
-  background-color: var(--secondary-background-color);
-  height: 60vh;
-  width: 86%;
-  margin: auto;
-  margin-top: 2rem;
-}
-@media (min-width: 43.75em) {
-  header {
-    width: 100%;
-    height: 30vh;
-    margin: 0;
-    background-color: var(--primary-accent-color);
-  }
-}
 header h1 {
   font-size: 6.5ch;
-  padding-block: 0 1rem;
 }
 @media (min-width: 43.75em) {
   header h1 {
     font-size: 10ch;
-    padding: auto;
-    margin: auto;
   }
 }
 
+body {
+  display: grid;
+  grid-template-columns: 7% 1fr 7%;
+  grid-template-areas: ". header ." ". main ." "footer footer footer";
+}
+body header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 main {
+  display: grid;
+  grid-auto-flow: row;
+}
+main section {
+  display: grid;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 7% repeat(2, 1fr) 7%;
+}
+
+.row-gap {
+  row-gap: 4ch;
+}
+
+header {
+  grid-area: header;
+  height: 60vh;
+}
+
+main {
+  grid-area: main;
+}
+main section picture {
   width: 100%;
-  padding-block: 1.25rem;
+  height: 100%;
+}
+main section picture img {
+  object-fit: cover;
+}
+
+footer {
+  grid-area: footer;
+}
+footer nav {
+  grid-column: 2/4;
+  grid-row: 1;
+}
+footer nav ul {
+  padding: 0;
+}
+footer div {
+  grid-column: 2/4;
+  grid-row: 2;
+  width: 100%;
+}
+
+body {
+  padding-top: 4ch;
+}
+
+nav {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex: 1 1 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
