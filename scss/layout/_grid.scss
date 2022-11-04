@@ -9,11 +9,13 @@ body {
         'footer footer footer'
     ;
 
-    header {
+    > header {
         display: grid;
 
         justify-content: center;
         align-items: center;
+
+        height: 60vh;
     }
     
 }
@@ -24,6 +26,25 @@ main {
 
     section {
         display: grid;
+        grid-auto-flow: row;
+        padding: 1ch;
+        gap: 2ch;
+
+        header {
+            display: flex;
+            justify-content: start;
+            align-content: end;
+            grid-column: 1;
+            grid-row: 1;
+        }
+        
+        summary {
+            grid-row: 2;
+        }
+
+        button {
+            grid-row: 3;
+        }
     }
 }
 
