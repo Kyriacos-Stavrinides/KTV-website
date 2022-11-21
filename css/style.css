@@ -45,17 +45,17 @@ a, a:visited, a:active {
 }
 
 .shadow {
-  box-shadow: 0rem 0rem 0.625rem var(--secondary-accent-color);
+  box-shadow: 0rem 0rem 0.25rem var(--secondary-accent-color);
 }
 
 button {
   border: none;
-  border-radius: 1.25rem;
+  border-radius: 2rem;
   color: var(--secondary-text-color);
   background-color: var(--primary-accent-color);
   font-size: 1rem;
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 footer {
@@ -87,11 +87,21 @@ body {
   grid-template-columns: 7% 1fr 7%;
   grid-template-areas: ". header ." ". main ." "footer footer footer";
 }
+@media (min-width: 43.75em) {
+  body {
+    grid-template-areas: "header header header" ". main ." "footer footer footer";
+  }
+}
 body > header {
   display: grid;
   justify-content: center;
   align-items: center;
   height: 60vh;
+}
+@media (min-width: 43.75em) {
+  body > header {
+    height: 30vh;
+  }
 }
 
 main {
@@ -105,9 +115,6 @@ main section {
   gap: 2ch;
 }
 main section header {
-  display: flex;
-  justify-content: start;
-  align-content: end;
   grid-column: 1;
   grid-row: 1;
 }
@@ -116,11 +123,18 @@ main section summary {
 }
 main section button {
   grid-row: 3;
+  width: 50%;
+  margin: auto;
 }
 
 footer {
   display: grid;
   grid-template-columns: 7% repeat(2, 1fr) 7%;
+  row-gap: 2ch;
+}
+footer address {
+  display: grid;
+  grid-auto-flow: row;
 }
 
 .row-gap {
@@ -129,6 +143,11 @@ footer {
 
 header {
   grid-area: header;
+}
+@media (min-width: 43.75em) {
+  header {
+    background-color: var(--background-color);
+  }
 }
 
 main {
@@ -149,6 +168,12 @@ footer nav {
   grid-column: 2/4;
   grid-row: 1;
 }
+@media (min-width: 43.75em) {
+  footer nav {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
 footer nav ul {
   padding: 0;
 }
@@ -156,20 +181,36 @@ footer div {
   grid-column: 2/4;
   grid-row: 2;
   width: 100%;
+  text-align: end;
+}
+@media (min-width: 43.75em) {
+  footer div {
+    grid-column: 3;
+    grid-row: 2;
+  }
 }
 
 body {
   padding-top: 4ch;
 }
-
-nav {
-  display: flex;
+@media (min-width: 43.75em) {
+  body {
+    padding: 0;
+  }
 }
+
+main section header {
+  display: flex;
+  display: flex;
+  justify-content: start;
+}
+
 nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex: 1 1 auto;
+  width: 55%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,13 @@
-
+main {
+    section {
+        header {
+            display: flex;
+            display: flex;
+            justify-content: start;
+        }
+    }
+}
 nav {
-    display: flex;
 
     ul {
         display: flex;
@@ -9,6 +16,8 @@ nav {
         justify-content: space-evenly;
 
         flex: 1 1 auto;
+
+        width: 55%;
     }
 }
 

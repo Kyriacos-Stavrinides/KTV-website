@@ -9,6 +9,16 @@ body {
         'footer footer footer'
     ;
 
+    @include breakpoint-up(medium) {
+         grid-template-areas: 
+            'header header header'
+            '. main .'
+            'footer footer footer'
+        ;
+
+    }
+
+    
     > header {
         display: grid;
 
@@ -16,6 +26,11 @@ body {
         align-items: center;
 
         height: 60vh;
+
+        @include breakpoint-up(medium) {
+            height: 30vh;
+        }
+    
     }
     
 }
@@ -31,9 +46,6 @@ main {
         gap: 2ch;
 
         header {
-            display: flex;
-            justify-content: start;
-            align-content: end;
             grid-column: 1;
             grid-row: 1;
         }
@@ -44,6 +56,9 @@ main {
 
         button {
             grid-row: 3;
+
+            width: 50%;
+            margin: auto;
         }
     }
 }
@@ -51,6 +66,12 @@ main {
 footer {
     display: grid;
     grid-template-columns: 7% repeat(2, 1fr) 7%;
+
+    row-gap: 2ch;
+    address {
+        display: grid;
+        grid-auto-flow: row;
+    }
 }
 
 .row-gap {
